@@ -1,0 +1,14 @@
+
+
+/* Background image */
+body {
+    background-image:url("music.gif"); /* Or any image you choose */
+    background-size: cover;
+}
+
+/* Styling for <h1> tags */
+h1 {
+    font-family: Arial, sans-serif;
+    color: navy;
+    text-align: center;
+}
