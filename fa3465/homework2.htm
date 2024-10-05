@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <title>Catalog of Sweaters</title>
+
+    <style>
+      body {
+        background-image: url('brick.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 40px 200px;
+        font-family: Arial, sans-serif;
+		margin: 0;
+		
+      }
+      form {
+		background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+		position: relative;
+		z-index: 1;
+      }
+      table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border: 2px solid black;
+		border-style: double;
+      }
+      th, td {
+        border: 2px solid black;
+        text-align: center;
+        padding: 15px;
+      }
+      th {
+        background-color: lightgray;
+        font-size: 1.2em;
+      }
+	  /* Column width styling */
+      th:first-child, td:first-child {
+        width: 35%;
+      }
+      th:nth-child(2), td:nth-child(2) {
+        width: 20%;
+      }
+      th:nth-child(3), td:nth-child(3) {
+        width: 25%;
+      }
+      th:last-child, td:last-child {
+        width: 20%;
+      }
+
+      table caption {
+        font-family: 'Lucida Grande', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: navy;
+        margin-bottom: 20px;
+		position: relative;
+		z-index: 1;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      input[type="radio"] {
+        transform: scale(1.2);
+      }
+      input[type="text"] {
+        width: 50px;
+        font-size: 18px;
+      }
+      input[type="submit"], input[type="reset"] {
+        height: 40px;
+        padding: 0 20px;
+        font-size: 16px;
+        margin-top: 20px;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      input[type="submit"] {
+        background-color: green;
+        color: white;
+      }
+      input[type="reset"] {
+        background-color: yellow;
+        color: black;
+      }
+      .quantity-label {
+        font-size: 1em;
+      }
+	  p {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <form action="#" method="POST">
+      <table>
+        <caption>Catalog of Sweaters</caption>
+        <tr>
+          <th>Product Image</th>
+          <th>Product Price</th>
+          <th>Product Selection</th>
+          <th>Product Quantity</th>
+        </tr>
+        <tr>
+          <td><img src="redsweater.jpg" alt="Red Sweater"></td>
+          <td>$35.00</td>
+          <td><input type="radio" name="sweater" value="Red Sweater"> Red Sweater</td>
+          <td><span class="quantity-label">Quantity:</span> <input type="text" name="quantity1" placeholder="0"></td>
+        </tr>
+        <tr>
+          <td><img src="bluesweater.jpg" alt="Blue Sweater"></td>
+          <td>$45.00</td>
+          <td><input type="radio" name="sweater" value="Blue Sweater"> Blue Sweater</td>
+          <td><span class="quantity-label">Quantity:</span> <input type="text" name="quantity2" placeholder="0"></td>
+        </tr>
+        <tr>
+          <td><img src="whitesweater.jpg" alt="White Sweater"></td>
+          <td>$30.00</td>
+          <td><input type="radio" name="sweater" value="White Sweater"> White Sweater</td>
+          <td><span class="quantity-label">Quantity:</span> <input type="text" name="quantity3" placeholder="0"></td>
+        </tr>
+      </table>
+       <p>
+        <input type="submit" value="Submit Selections">
+        <input type="reset" value="Clear Selections">
+      </p>
+    </form>
+  </body>
+
+</html>
