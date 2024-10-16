@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Belize Travel Guide</title>
+
+    <style>
+      /* General Styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      h1,
+      h2 {
+        color: #66cc33;
+        text-align: center;
+      }
+
+      p {
+        color: #333;
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      /* Banner Styling */
+      div#banner {
+        background: url("belize-banner.jpeg") center center/cover no-repeat;
+        padding: 4%;
+        color: white;
+        text-align: center;
+      }
+
+      h1#heading {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-shadow: 2px 2px #333;
+      }
+
+      /* Navigation Menu Styling */
+      .topnav {
+        background-color: #e5e5e5;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 20px;
+        overflow: hidden;
+      }
+
+      .topnav a {
+        color: #333;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 1em;
+        transition: 0.3s;
+      }
+
+      .topnav a:hover {
+        background-color: #66cc33;
+        color: white;
+      }
+
+      .active {
+        background-color: #66cc33;
+        color: white;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown .dropdownbutton {
+        font-size: 1em;
+        border: none;
+        outline: none;
+        color: #333;
+        padding: 14px 20px;
+        background-color: inherit;
+        margin: 0;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .dropdown:hover .dropdownbutton {
+        background-color: #66cc33;
+        color: white;
+      }
+
+      .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdowncontent {
+        display: block;
+      }
+
+      .dropdowncontent a {
+        float: none;
+        display: block;
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        text-align: left;
+      }
+
+      .dropdowncontent a:hover {
+        background-color: lightgray;
+        color: black;
+      }
+
+      /* Responsive Styles */
+      @media screen and (max-width: 750px) {
+        .topnav a:not(:first-child),
+        .dropdown .dropdownbutton {
+          display: none;
+        }
+
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+
+        .topnav.responsive {
+          position: relative;
+        }
+
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .topnav.responsive .dropdown {
+          float: none;
+        }
+
+        .topnav.responsive .dropdowncontent {
+          position: relative;
+        }
+
+        .topnav.responsive .dropdown .dropdownbutton {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      /* Content Styling */
+      .content {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+      }
+
+      /* Form Styling */
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      select {
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+
+      .checkbox-group,
+      .radio-group {
+        margin-bottom: 20px;
+      }
+
+      .checkbox-group label,
+      .radio-group label {
+        font-weight: normal;
+      }
+
+      input[type="submit"] {
+        background-color: #66cc33;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: 0.3s;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #4caf50;
+      }
+
+      /* Footer Styling */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin-top: 30px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("mytopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Banner Section -->
+    <div id="banner">
+      <h1 id="heading">Contact Us - Belize Travel Guide</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+      <a href="index.htm">Home</a>
+      <div class="dropdown">
+        <button class="dropdownbutton">Things to Do</button>
+        <div class="dropdowncontent">
+          <a href="adventure.htm">Adventures</a>
+          <a href="relaxation.htm">Relaxation Spots</a>
+        </div>
+      </div>
+      <a href="popular-landmarks.htm">Popular Landmarks</a>
+      <a href="travel-tips.htm">Travel Tips</a>
+      <a href="contact-us.htm" class="active">Contact Us</a>
+      <a href="about-me.htm">About Me</a>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px;"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+      <h2>Get in Touch with Us</h2>
+      <p>If you have any questions, feel free to reach out via the form below:</p>
+
+      <!-- Contact Form -->
+      <form action="#" method="post">
+        <!-- Text Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." required />
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email.." required />
+
+        <!-- Select Dropdown -->
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+          <option value="general">General Inquiry</option>
+          <option value="booking">Booking</option>
+          <option value="support">Support</option>
+        </select>
+
+        <!-- Radio Button Group -->
+        <div class="radio-group">
+          <label>Preferred Contact Method:</label>
+          <input type="radio" id="emailcontact" name="contact_method" value="email" />
+          <label for="emailcontact">Email</label>
+          <input type="radio" id="phonecontact" name="contact_method" value="phone" />
+          <label for="phonecontact">Phone</label>
+        </div>
+
+        <!-- Checkbox Group -->
+        <div class="checkbox-group">
+          <label>What are you interested in? (Check all that apply):</label>
+          <input type="checkbox" id="activities" name="interests" value="activities" />
+          <label for="activities">Activities</label>
+          <input type="checkbox" id="accommodation" name="interests" value="accommodation" />
+          <label for="accommodation">Accommodation</label>
+          <input type="checkbox" id="transport" name="interests" value="transport" />
+          <label for="transport">Transportation</label>
+        </div>
+
+        <!-- Textarea Field -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" />
+
