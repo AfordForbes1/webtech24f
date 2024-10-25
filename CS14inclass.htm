@@ -54,7 +54,20 @@ else
     alert("Idiot");
 }
 }
-           
+
+function changePic() 
+{
+   const myimg=document.getElementById("b");
+   if(myimg.src.match ("planes.jpg") == "planes.jpg")
+   {
+    myimg.src="ships.jpg";
+   }
+   else
+   {
+    myimg.src="planes.jpg"; 
+   }
+}
+
         </script>
         
     </head>
@@ -87,7 +100,7 @@ else
             other image. The ALT and TITLE must change appropriately.
         </p></div>
         <div>
-            <img src="planes.jpg" alt="Planes" title="Flying High" width="200"/>
+            <img id="b" onclick="changePic()" src="planes.jpg" alt="Planes" title="Flying High" width="200"/>
         </div>
     
     </body>
