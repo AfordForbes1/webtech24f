@@ -1,268 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belize Travel Guide</title>
 
     <style>
-      /* General Styling */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f2f2f2;
-      }
-
-      h1, h2 {
-        color: #66cc33;
-        text-align: center;
-      }
-
-      p {
-        color: #333;
-        font-size: 1em;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        text-align: justify;
-      }
-
-      /* Banner Styling */
-      div#banner {
-        background: url("belize-banner.jpeg") center center/cover no-repeat;
-        padding: 4%;
-        color: white;
-        text-align: center;
-      }
-
-      h1#heading {
-        font-family: Arial, sans-serif;
-        font-weight: bold;
-        text-shadow: 2px 2px #333;
-      }
-
-      /* Navigation Menu Styling */
-      .topnav {
-        background-color: #e5e5e5;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 20px;
-        overflow: hidden;
-      }
-
-      .topnav a {
-        color: #333;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-        font-size: 1em;
-        transition: 0.3s;
-      }
-
-      .topnav a:hover {
-        background-color: #66cc33;
-        color: white;
-      }
-
-      .active {
-        background-color: #66cc33;
-        color: white;
-      }
-
-      .dropdown {
-        position: relative;
-      }
-
-      .dropdown .dropdownbutton {
-        font-size: 1em;
-        border: none;
-        outline: none;
-        color: #333;
-        padding: 14px 20px;
-        background-color: inherit;
-        margin: 0;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .dropdown:hover .dropdownbutton {
-        background-color: #66cc33;
-        color: white;
-      }
-
-      .dropdowncontent {
-        display: none;
-        position: absolute;
-        background-color: white;
-        min-width: 160px;
-        z-index: 1;
-      }
-
-      .dropdown:hover .dropdowncontent {
-        display: block;
-      }
-
-      .dropdowncontent a {
-        float: none;
-        display: block;
-        color: #333;
-        padding: 12px 16px;
-        text-decoration: none;
-        text-align: left;
-      }
-
-      .dropdowncontent a:hover {
-        background-color: lightgray;
-        color: black;
-      }
-
-      /* Responsive Styles */
-      @media screen and (max-width: 750px) {
-        .topnav a:not(:first-child), .dropdown .dropdownbutton {
-          display: none;
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
         }
 
-        .topnav a.icon {
-          float: right;
-          display: block;
+        h1, h2 {
+            color: #66cc33;
+            text-align: center;
         }
 
-        .topnav.responsive {
-          position: relative;
+        /* Paragraph Styling */
+        p {
+            color: #333; /* Text color */
+            font-size: 1em; /* Font size */
+            line-height: 1.6; /* Line height */
+            margin-bottom: 20px; /* Space below each paragraph */
+            text-align: justify; /* Justify text */
+        }
+        /* Banner Styling */
+        div#banner {
+            background: url("belize-banner.jpeg") center center/cover no-repeat;
+            padding: 4%;
+            color: white;
+            text-align: center;
         }
 
-        .topnav.responsive .icon {
-          position: absolute;
-          right: 0;
-          top: 0;
+        h1#heading {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-shadow: 2px 2px #333;
         }
 
-        .topnav.responsive a {
-          float: none;
-          display: block;
-          text-align: left;
+        /* Navigation Menu Styling */
+        .topnav {
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
         }
 
-        .topnav.responsive .dropdown {
-          float: none;
+        .topnav a {
+            color: #333;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: 0.3s;
         }
 
-        .topnav.responsive .dropdowncontent {
-          position: relative;
+        .active {
+            background-color: #66cc33;
+            color: white;
         }
 
-        .topnav.responsive .dropdown .dropdownbutton {
-          display: block;
-          width: 100%;
-          text-align: left;
+        .dropdown {
+            position: relative;
         }
-      }
 
-      /* Content Styling */
-      .content {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: white;
-        border: 1px solid whitesmoke;
-        border-radius: 8px;
-      }
-            /* Style to center the iframe */
-			.video-container {
-        text-align: center;
-        margin: 20px 0;
-      }
+        .dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: #333;
+            padding: 14px 20px;
+            background-color: inherit;
+            margin: 0;
+            cursor: pointer;
+        }
 
-      /* Adjust iframe size */
-      .video-container iframe {
-        width: 1000px; /* Make the video wider */
-        height: 600px; /* Increase the height as well */
-        max-width: 100%; /* Ensure responsiveness */
-      }
+        .dropdowncontent {
+            position: absolute;
+            display: none; /* Hidden by default */
+            background-color: white;
+            z-index: 1;
+        }
 
-      /* Footer Styling */
-      footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #333;
-        color: white;
-        margin-top: 30px;
-      }
+        .dropdown:hover .dropdowncontent {
+            display: block; /* Show dropdown on hover */
+        }
+
+        .dropdowncontent a {
+            float: none;
+            display: block;
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: #66cc33;
+            color: white;
+        }
+
+        .dropdowncontent a:hover {
+            background-color: lightgray;
+            color: black;
+        }
+
+        /* White Box for Content */
+        .content {
+            max-width: 900px; /* Limit width of the box */
+            margin: 20px auto; /* Center the box */
+            padding: 20px; /* Inner padding */
+            background-color: white; /* White background */
+            border: 1px solid whitesmoke; /* Light border */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Video Container */
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
     </style>
+</head>
 
-    <script type="text/javascript">
-      function myFunction() {
-        var x = document.getElementById("mytopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    </script>
-  </head>
-
-  <body>
-    <!-- Banner Section -->
-    <div id="banner">
-      <h1 id="heading">Welcome to Belize Travel Guide</h1>
-    </div>
+<body>
+    <h1>Welcome to Belize Travel Guide</h1>
 
     <!-- Background Music -->
     <audio autoplay loop>
-      <source src="background-music.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
+        <source src="background-music.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
     </audio>
 
     <!-- Navigation Menu -->
     <div class="topnav" id="mytopnav">
-      <a href="index.htm" class="active">Home</a>
-      <div class="dropdown">
-        <button class="dropdownbutton">Things to Do</button>
-        <div class="dropdowncontent">
-          <a href="adventure.htm">Adventures</a>
-          <a href="relaxation.htm">Relaxation Spots</a>
+        <a href="index.htm" class="active">Home</a>
+        
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+               
+            </div>
         </div>
-      </div>
-      <a href="popular-landmarks.htm">Popular Landmarks</a>
-      <a href="travel-tips.htm">Travel Tips</a>
-      <a href="contact-us.htm">Contact Us</a>
-      <a href="about-me.htm">About Me</a>
-      <a
-        href="javascript:void(0);"
-        style="font-size: 15px;"
-        class="icon"
-        onclick="myFunction()"
-      >&#9776;</a>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
     </div>
 
-    <!-- Page Content -->
     <div class="content">
-      <h2>Discover the Best of Belize</h2>
-      <p>
-        Welcome to Belize, a paradise filled with pristine beaches, ancient
-        ruins, rich culture, and thrilling adventures. Explore all the exciting
-        things you can do during your visit, from snorkeling the Belize Barrier
-        Reef to hiking through lush rainforests.
-      </p>
+        <h2>Discover the Best of Belize</h2>
+        <p>Welcome to Belize, a paradise filled with pristine beaches, ancient ruins, rich culture, and thrilling adventures. Explore all the exciting things you can do during your visit, from snorkeling the Belize Barrier Reef to hiking through lush rainforests.</p>
     </div>
-	<div class="video-container">
-		<iframe
-		  width="560"
-		  height="315"
-		  src="https://www.youtube.com/embed/Zjr6jCdDFHI?si=IHyMO6eyAGIrNoBp"
-		  title="YouTube video player"
-		  frameborder="0"
-		  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-		  referrerpolicy="strict-origin-when-cross-origin"
-		  allowfullscreen
-		></iframe>
-	  </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Zjr6jCdDFHI?si=IHyMO6eyAGIrNoBp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
+    </div>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2024 Belize Travel Guide</p>
+        <p>&copy; 2024 Belize Travel Guide</p>
     </footer>
-  </body>
+</body>
 </html>
+
