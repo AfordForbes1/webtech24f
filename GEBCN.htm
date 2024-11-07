@@ -8,18 +8,32 @@
 
 	<style>
 	/* Your styles go here */
-	div {padding:3%;margin-top:1%;margin-bottom: 1%;};
-    div.odd{border:3px soild red};
-    div.even {border:3px solid green};
-	
+	  div{padding:3%;margin-top:1%;margin-bottom: 1%}
+    div.odd{border:3px solid red}
+    div.even {border:3px solid green}
+  
 	</style>
 	<script type="text/javascript">
 
         function doOdd()
         {
+          
             const myodds = document.getElementsByClassName("odd");
             const myevens= document.getElementsByClassName("even");
+            var x;
+            for(x=0; x < myodds.length;++x)
+            {
+              myodds[x].style.backgroundColor = "lime";
+            }
+
+            for(x=0; x < myevens.length;++x)
+            {
+              myevens[x].style.backgroundColor = "yellow";
+            }
+
         }
+
+        
 
 
     </script>
@@ -31,31 +45,25 @@
 
   <body>
 	<!-- Your HTML goes here -->
-	<div class="odd" onclick="doOdd()">
+   <h1> This is a test </h1>
+	  <div class="odd" onclick="doOdd()">
 
     </div>
-
-    <div class="even">
-        
+		<div class="even" onclick="doEven()">
+      
     </div>
-  
-	<div class="odd" onclick="doOdd()">
-        
-    </div>
+    <div class="odd" onclick="doOdd()">
 
-    <div class="even">
-        
     </div>
-
-    <div class="odd"onclick="doOdd()">
-        
+    <div class="even" onclick="doEven()">
+      
     </div>
+    <div class="odd" onclick="doOdd()">
 
-    <div class="even">
-        
     </div>
-
-		
+    <div class="even" onclick="doEven()">
+      
+    </div>
 	
 	
   </body>
