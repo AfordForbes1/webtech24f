@@ -1,0 +1,117 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #e6fffa, #fef6e4); /* Light teal to cream gradient */
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header Banner */
+#banner {
+    background: url("belize-banner.jpeg") center center/cover no-repeat;
+    padding: 80px 4%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Title Animation */
+h1#heading {
+    font-weight: bold;
+    animation: slideIn 1.5s ease-out;
+    font-size: 2.8em;
+}
+
+/* Navigation Bar */
+.topnav {
+    position: sticky;
+    top: 0;
+    background-color: #2e8b57;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #66cc33;
+    color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownbutton {
+    background-color: #2e8b57;
+    color: white;
+    font-size: 1.1em;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdownbutton:hover {
+    background-color: #66cc33;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdowncontent a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+}
+
+.dropdowncontent a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdowncontent {
+    display: block;
+}
+
+/* Slide-in Keyframe Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}

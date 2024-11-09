@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventures in Belize</title>
+    <meta name="description" content="Discover thrilling adventures in Belize, from snorkeling the Barrier Reef to exploring lush rainforests and ancient ruins." />
+    
+    <style>
+        /* General Styling */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #e6fffa, #fef6e4); /* Light teal to cream gradient */
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Banner */
+        #banner {
+            background: url("belize-banner.jpeg") center center/cover no-repeat;
+            padding: 80px 4%;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        /* Title Animation */
+        h1#heading {
+            font-weight: bold;
+            font-size: 2.8em;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Navigation Bar */
+        .topnav {
+            position: sticky;
+            top: 0;
+            background-color: #2e8b57;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .topnav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #66cc33;
+            color: #fff;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdownbutton {
+            background-color: #2e8b57;
+            color: white;
+            font-size: 1.1em;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdownbutton:hover {
+            background-color: #66cc33;
+        }
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        .dropdowncontent a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1em;
+        }
+
+        .dropdowncontent a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+        /* Content Box */
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 2s ease;
+        }
+
+        /* Adventure List Section */
+        .adventure-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .adventure-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .adventure-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .adventure-item h3 {
+            color: #2e8b57;
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .adventure-item p {
+            color: #444;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .adventure-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section with Banner -->
+    <div id="banner">
+        <h1 id="heading">Adventures in Belize</h1>
+        <p>Uncover the thrill of Belize’s breathtaking landscapes and exciting activities.</p>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm" class="active">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h2>Top Adventure Activities</h2>
+        <p>Belize offers a variety of adventures perfect for thrill-seekers. Here are some must-try experiences.</p>
+        
+        <section class="adventure-list">
+            <div class="adventure-item">
+                <img src="barrier-reef.jpg" alt="Snorkeling the Barrier Reef">
+                <h3>Snorkeling the Barrier Reef</h3>
+                <p>Explore the vibrant underwater world of the Belize Barrier Reef, home to colorful coral and marine life.</p>
+            </div>
+
+            <div class="adventure-item">
+                <img src="rainforest-hike.jpg" alt="Hiking in the Rainforest">
+                <h3>Hiking in the Rainforest</h3>
+                <p>Experience the lush rainforests of Belize with guided hikes, discovering wildlife and breathtaking views.</p>
+            </div>
+
+            <div class="adventure-item">
+                <img src="mayan-ruins.jpg" alt="Exploring Ancient Maya Ruins">
+                <h3>Exploring Ancient Maya Ruins</h3>
+                <p>Step back in time at ancient Maya ruins like Caracol and Xunantunich, rich with history and culture.</p>
+            </div>
+
+            <div class="adventure-item">
+                <img src="cave-tubing.jpg" alt="Cave Tubing">
+                <h3>Cave Tubing</h3>
+                <p>Float through ancient caves on a tubing adventure, marveling at rock formations and underground rivers.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+</body>
+</html>

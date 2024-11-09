@@ -1,0 +1,271 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular Landmarks in Belize</title>
+    <meta name="description" content="Explore the top landmarks in Belize, including the Great Blue Hole, ancient Mayan ruins, and scenic islands. Discover Belize's rich history and natural beauty." />
+    <meta name="keywords" content="Belize landmarks, Great Blue Hole, Altun Ha, Caracol, Caye Caulker, Xunantunich, travel Belize" />
+    <meta name="author" content="Amber" />
+
+    <!-- Link to external CSS file for general styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Specific CSS for the Popular Landmarks Page */
+        
+        /* Centered Opening Paragraph Box */
+        .intro-box {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Landmark Container Styling */
+        .landmark-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Landmark Box Styling */
+        .landmark {
+            position: relative;
+            width: 45%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .landmark:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Landmark Image and Title */
+        .landmark img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #2e8b57;
+        }
+
+        .landmark h3 {
+            color: #2e8b57;
+            font-size: 1.6em;
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Paragraph Hover Effect */
+        .landmark p {
+            color: #333;
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: justify;
+            padding: 10px;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            overflow: auto;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .landmark:hover p {
+            display: block;
+        }
+
+        /* Page Background */
+        body {
+            background: linear-gradient(to right, #e6fffa, #fef6e4);
+        }
+
+        /* Section Title Styling */
+        h2 {
+            font-size: 2.2em;
+            color: #2e8b57;
+            text-align: center;
+            margin: 30px 0 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styling Enhancement */
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        /* Back to Top Button Styling */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #ff4f41;
+        }
+    </style>
+
+    <script>
+        // Show Back to Top Button on Scroll
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smooth Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div id="banner">
+        <h1 id="heading">Popular Landmarks in Belize</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm" class="active">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- Centered Opening Paragraph Box -->
+    <div class="intro-box">
+        <h2>Top Landmarks to Explore in Belize</h2>
+        <p>
+            Belize is home to some of the world's most stunning natural and historical landmarks. Discover the
+            Belize Barrier Reef, the Great Blue Hole, and ancient Mayan ruins such as Altun Ha and Caracol.
+            Experience the breathtaking beauty of these iconic locations, which reflect the rich culture and
+            history of Belize.
+        </p>
+    </div>
+
+    <!-- Landmark Boxes in Two-Column Layout -->
+    <div class="landmark-container">
+        <div class="landmark">
+            <img src="Altun-Ha.jpg" alt="Altun Ha">
+            <h3>Altun Ha</h3>
+            <p>
+                Just 30 miles from Belize City, Altun Ha is one of Belize’s most famous Mayan sites and a symbol
+                of its rich ancient history. The site’s most famous artifact, a jade head depicting the Mayan Sun God, 
+                was discovered here and is the largest carved jade object in the Mayan world. Visitors can climb the Temple of
+                the Masonry Altars for a stunning view of the ancient ceremonial grounds and lush surroundings.
+            </p>
+        </div>
+
+        <div class="landmark">
+            <img src="bluehole.jpg" alt="The Great Blue Hole">
+            <h3>The Great Blue Hole</h3>
+            <p>
+                One of Belize’s most iconic natural wonders, the Great Blue Hole is a massive underwater sinkhole located near 
+                the center of Lighthouse Reef. Its deep blue waters and mysterious depths make it a bucket-list destination for 
+                divers worldwide. Over 400 feet deep and nearly 1,000 feet across, the Great Blue Hole reveals striking limestone 
+                formations, stalactites, and a vibrant marine ecosystem.
+            </p>
+        </div>
+
+        <div class="landmark">
+            <img src="Caracol.jpg" alt="Caracol">
+            <h3>Caracol</h3>
+            <p>
+                Hidden deep within the Chiquibul Forest Reserve, Caracol is Belize’s largest Mayan archaeological site and one
+                of its most significant. The site includes the towering Caana (“Sky Palace”), which remains the tallest man-made
+                structure in Belize at over 140 feet. Caracol once rivaled the power of the mighty Mayan city Tikal, and its ruins 
+                are adorned with intricate carvings and hieroglyphs that tell tales of its rich past.
+            </p>
+        </div>
+
+        <div class="landmark">
+            <img src="Xunantunich.jpg" alt="Xunantunich">
+            <h3>Xunantunich</h3>
+            <p>
+                Set on a hilltop overlooking the Mopan River, Xunantunich is an ancient Mayan archaeological site that transports visitors back in time. Known for its towering pyramid, El Castillo, which rises over 130 feet, Xunantunich offers panoramic views of Belize’s lush landscape and Guatemala’s distant mountains.
+            </p>
+        </div>
+
+        <div class="landmark">
+            <img src="caye-caulker.jpg" alt="Caye Caulker">
+            <h3>Caye Caulker</h3>
+            <p>
+                Just a short boat ride from Belize City, Caye Caulker is a small island paradise that perfectly encapsulates the laid-back Caribbean lifestyle. Known for its sandy streets, vibrant murals, and easygoing vibe, Caye Caulker invites visitors to "Go Slow" and embrace the island's relaxed pace.
+            </p>
+        </div>
+
+        <div class="landmark">
+            <img src="Placencia.jpg" alt="Placencia Peninsula">
+            <h3>Placencia Peninsula</h3>
+            <p>
+                Known for its stunning beaches, Placencia is a charming village and peninsula that draws travelers seeking relaxation and adventure by the sea. With soft sandy shores, vibrant coral reefs, and a friendly local vibe, Placencia is a perfect base for diving, fishing, and wildlife excursions.
+            </p>
+        </div>
+
+        <div class="landmark">
+            <img src="sleeping-giant.jpg" alt="The Sleeping Giant">
+            <h3>The Sleeping Giant</h3>
+            <p>
+                The Sleeping Giant is a beloved landmark nestled in the Maya Mountains, so named because of its distinct formation resembling a giant lying on its back. Visible from the scenic Hummingbird Highway, this natural wonder captivates travelers with its mythic appearance and majestic presence.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="back-to-top" onclick="scrollToTop()">↑ Top</div>
+</body>
+</html>

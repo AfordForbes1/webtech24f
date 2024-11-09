@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relaxation Spots in Belize</title>
+    <meta name="description" content="Discover tranquil spots in Belize, from serene beaches to soothing nature trails and hidden relaxation spots." />
+    
+    <style>
+        /* General Styling */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #e6fffa, #fef6e4); /* Light teal to cream gradient */
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Banner */
+        #banner {
+            background: url("belize-banner.jpeg") center center/cover no-repeat;
+            padding: 80px 4%;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        /* Title Animation */
+        h1#heading {
+            font-weight: bold;
+            font-size: 2.8em;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Navigation Bar */
+        .topnav {
+            position: sticky;
+            top: 0;
+            background-color: #2e8b57;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .topnav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #66cc33;
+            color: #fff;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdownbutton {
+            background-color: #2e8b57;
+            color: white;
+            font-size: 1.1em;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdownbutton:hover {
+            background-color: #66cc33;
+        }
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        .dropdowncontent a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 1em;
+        }
+
+        .dropdowncontent a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+        /* Content Box */
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 2s ease;
+        }
+
+        /* Relaxation List Section */
+        .relaxation-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .relaxation-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .relaxation-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .relaxation-item h3 {
+            color: #2e8b57;
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .relaxation-item p {
+            color: #444;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .relaxation-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section with Banner -->
+    <div id="banner">
+        <h1 id="heading">Relaxation in Belize</h1>
+        <p>Discover serene places to unwind and connect with nature.</p>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm" class="active">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h2>Top Relaxation Spots</h2>
+        <p>Unwind in these beautiful, peaceful locations throughout Belize, perfect for anyone seeking tranquility and natural beauty.</p>
+        
+        <section class="relaxation-list">
+            <div class="relaxation-item">
+                <img src="beaches.jpeg" alt="Serene Beaches">
+                <h3>Serene Beaches</h3>
+                <p>Enjoy white sands and crystal-clear waters at Belize’s most beautiful beaches, perfect for relaxation.</p>
+            </div>
+
+            <div class="relaxation-item">
+                <img src="hot springs.jpg" alt="Natural Hot Springs">
+                <h3>Natural Hot Springs</h3>
+                <p>Soak in natural hot springs, a perfect way to unwind in the scenic landscapes of Belize.</p>
+            </div>
+
+            <div class="relaxation-item">
+                <img src="waterfalls.jpg" alt="Waterfalls">
+                <h3>Waterfalls</h3>
+                <p>Visit Belize’s waterfalls, where you can relax in nature's embrace with the calming sound of flowing water.</p>
+            </div>
+
+            <div class="relaxation-item">
+                <img src="trail.jpg" alt="Forest Trails">
+                <h3>Forest Trails</h3>
+                <p>Take a leisurely stroll along scenic forest trails, immersing yourself in Belize’s lush natural beauty.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+</body>
+</html>

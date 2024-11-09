@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Belize Travel Guide</title>
+    <meta name="description" content="Get in touch with the Belize Travel Guide team for inquiries about activities, bookings, and support. We’re here to help you plan your perfect Belize trip." />
+    <meta name="keywords" content="Belize contact, Belize travel guide contact, travel support, booking Belize, Belize travel inquiry" />
+    <meta name="author" content="Amber" />
+
+    <!-- Link to external CSS file for shared styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Specific CSS for the Contact Us Page */
+
+        /* General Styling for Content Boxes */
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #66cc33;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #57b52a;
+        }
+
+        /* Thank You Message Styling */
+        .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e6ffe6;
+            color: #2e8b57;
+            font-size: 1.2em;
+            border: 1px solid #cceccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        // Show Thank You message upon form submission
+        function showThankYouMessage(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Display Thank You message
+            document.getElementById("thankYouMessage").style.display = "block";
+
+            // Optionally clear the form fields
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div id="banner">
+        <h1 id="heading">Contact Us - Belize Travel Guide</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm" class="active">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h2>Get in Touch with Us</h2>
+        <p>If you have any questions, feel free to reach out via the form below:</p>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMessage" class="thank-you-message">
+            Thank you for reaching out to us. We will get back to you soon!
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contactForm" onsubmit="showThankYouMessage(event)">
+            <!-- Text Field -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required />
+
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required />
+
+            <!-- Select Dropdown -->
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="booking">Booking</option>
+                <option value="support">Support</option>
+            </select>
+
+            <!-- Radio Button Group -->
+            <div class="radio-group">
+                <label>Preferred Contact Method:</label>
+                <input type="radio" id="emailcontact" name="contact_method" value="email" />
+                <label for="emailcontact">Email</label>
+                <input type="radio" id="phonecontact" name="contact_method" value="phone" />
+                <label for="phonecontact">Phone</label>
+            </div>
+
+            <!-- Checkbox Group -->
+            <div class="checkbox-group">
+                <label>What are you interested in? (Check all that apply):</label>
+                <input type="checkbox" id="activities" name="interests" value="activities" />
+                <label for="activities">Activities</label>
+                <input type="checkbox" id="accommodation" name="interests" value="accommodation" />
+                <label for="accommodation">Accommodation</label>
+                <input type="checkbox" id="transport" name="interests" value="transport" />
+                <label for="transport">Transportation</label>
+            </div>
+
+            <!-- Textarea Field -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+</body>
+</html>
