@@ -15,20 +15,15 @@
     <script type="text/javascript">
         var myimages= new Array ("tiger5.jpg", "tiger6.jpg","tiger7.jpg","tiger8.jpg");
         var mycolors= new Array ("yellow","lightblue","green","pink");
+        var mycaps=new Array("This is Webtech","My fav color is black","I am a hairstylist","its Nov")
         var counter= 0;
         function showSlides()
             {
+                
                 var x = document.getElementById("daimg");
                 x.src = myimages[counter];
                 x.style.borderColor = mycolors[counter]
-                ++ counter; /* counter = counter + 1*/
-                if(counter > myimages.length -1)
-                {
-                counter = 0;
-                }
-                setTimeout("showSlides()", 1000);
             
-    
             }
         
     </script>
