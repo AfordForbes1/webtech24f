@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <meta name="description" content="Learn more about Amber, the creator behind the Belize Travel Guide, her connection to Belize, and her passion for sharing her homeland’s beauty and culture." />
+    <meta name="keywords" content="About Amber, Belize travel guide, Belize culture, travel to Belize, Belizean American" />
+    <meta name="author" content="Amber" />
+
+    <!-- Link to external CSS file for shared styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Specific CSS for the About Me Page */
+
+        /* Content Box Styling */
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Profile Section Styling */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .profile-section img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #66cc33;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease; /* Smooth transform for fallback */
+        }
+
+        .profile-description {
+            max-width: 700px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Banner Styling */
+        #banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url("belize-banner.jpeg") center center/cover no-repeat;
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading and Text Styling */
+        h2 {
+            color: #2e8b57;
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2e8b57;
+            color: white;
+            margin-top: 30px;
+            font-size: 1em;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div id="banner">
+        <h1 id="heading">About Me</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm" class="active">About Me</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h2>Hello There!</h2>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="me.jpg" alt="Photo of Amber" />
+            <div class="profile-description">
+                <p>
+                    Hello and welcome! I’m Amber, a Belizean American with a deep connection to the beautiful country of Belize.
+                    Growing up in a Belizean household and visiting frequently, I’ve come to know and cherish the landscapes, 
+                    cultures, and traditions that make Belize so special. As a senior at Babson College, concentrating in 
+                    technology and entrepreneurship, I’m creating this website to share my passion for Belize with others 
+                    and provide insights for anyone curious about this incredible destination.
+                </p>
+            </div>
+        </div>
+
+        <h2>My Journey</h2>
+        <p>
+            After spending years exploring the hidden gems of my home country, I decided to create this website as a way to share my love for Belize and its incredible offerings. 
+            I want to inspire others to visit this beautiful country and discover its breathtaking landscapes, rich history, and vibrant culture. This site is not just a travel guide; it's my personal project, where I combine my knowledge of technology and my entrepreneurial spirit to offer visitors useful tips, 
+            advice, and insights on how to make the most of their Belizean adventures. From popular landmarks to lesser-known spots, you'll find all the information you need here.
+        </p>
+    </div>
+
+    <div class="sitemap">
+        <h2>Site Map</h2>
+        <div class="sitemap-grid">
+            <a href="index.htm">Home</a>
+            <a href="adventure.htm">Adventures</a>
+            <a href="relaxation.htm">Relaxation Spots</a>
+            <a href="popular-landmarks.htm">Popular Landmarks</a>
+            <a href="travel-tips.htm">Travel Tips</a>
+            <a href="contact-us.htm">Contact Us</a>
+            <a href="about-me.htm">About Me</a>
+            <a href="credits.htm">Credits</a>
+        </div>
+    </div>
+
+    <div id="backToTop" class="back-to-top" onclick="scrollToTop()">↑ Top</div>
+
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+
+    <!-- jQuery Animation -->
+    <script>
+        $(document).ready(function () {
+            $(".profile-section img").hover(
+                function () {
+                    $(this).animate({ width: "200px", height: "200px" }, 300); // Scale up
+                },
+                function () {
+                    $(this).animate({ width: "180px", height: "180px" }, 300); // Scale back down
+                }
+            );
+        });
+    </script>
+</body>
+</html>

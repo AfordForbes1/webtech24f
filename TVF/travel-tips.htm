@@ -1,0 +1,286 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Tips for Belize</title>
+    <meta name="description" content="Get essential travel tips for Belize, including packing advice, currency guidance, transportation options, and local etiquette to ensure a smooth trip." />
+    <meta name="keywords" content="Belize travel tips, packing for Belize, currency in Belize, transportation in Belize, Belize local etiquette" />
+    <meta name="author" content="Amber" />
+
+    <!-- Link to external CSS file for shared styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Specific CSS for the Travel Tips Page */
+
+        /* General Styling for Content Boxes */
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table and Converter Layout */
+        .table-converter-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #66cc33;
+            color: white;
+        }
+
+        /* Converter Box Styling */
+        .converter-box {
+            max-width: 250px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .converter-box input[type="number"] {
+            width: 80%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .converter-box button {
+            background-color: #66cc33;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .converter-box button:hover {
+            background-color: #57b52a;
+        }
+
+        /* Section Header Styling */
+        h2 {
+            font-size: 1.8em;
+            color: #2e8b57;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tips Heading Styling */
+        h3 {
+            color: #ff6f61;
+            font-size: 1.4em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph Text Styling */
+        p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1em;
+        }
+
+        /* Back to Top Button Styling */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #ff4f41;
+        }
+    </style>
+
+    <script>
+        // Show Back to Top Button on Scroll
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smooth Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Currency Converter Function
+        function convertCurrency() {
+            const usd = document.getElementById("usd").value;
+            const bzd = (usd * 2).toFixed(2); // 1 USD = 2 BZD (Fixed rate)
+            document.getElementById("bzd").innerText = `BZD ${bzd}`;
+        }
+
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div id="banner">
+        <h1 id="heading">Travel Tips for Visiting Belize</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm" class="active">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h2>Top Travel Tips for Your Belize Adventure</h2>
+        <p>
+            Belize offers an incredible travel experience, but like any destination, it’s important to plan ahead
+            and stay informed. Below are some tips to ensure you have a smooth and enjoyable trip.
+        </p>
+
+        <h3>1. Pack Light, But Be Prepared</h3>
+        <p>
+            Belize is a tropical destination, so pack lightweight clothing, sunscreen, and insect repellent.
+            However, don't forget to bring a rain jacket or umbrella as tropical showers can occur unexpectedly.
+        </p>
+
+        <h3>2. Currency & Payments</h3>
+        <p>
+            The Belizean Dollar (BZD) is the official currency, but US dollars are widely accepted. It's also
+            advisable to carry cash in small denominations, especially in rural areas where card payments may not
+            be accepted.
+        </p>
+
+        <h3>3. Transportation</h3>
+        <p>
+            Consider renting a car if you plan to explore beyond the popular tourist spots. Public transportation
+            is limited, and taxis can be costly for long distances. If you're staying in coastal areas, water
+            taxis are a fun and practical way to get around.
+        </p>
+
+        <h3>4. Local Etiquette</h3>
+        <p>
+            Belizeans are warm and friendly people, so be sure to greet locals with a smile. It’s also polite to
+            ask before taking photos of people, especially in rural communities.
+        </p>
+    </div>
+
+    <!-- Table and Currency Converter Section -->
+    <div class="content">
+        <h2>Essential Travel Tips for Visiting Belize</h2>
+        <p>Before you travel, check out some key tips to make your trip smooth and enjoyable.</p>
+
+        <div class="table-converter-container">
+            <!-- Weather Table -->
+            <table>
+                <tr>
+                    <th colspan="2">Weather Considerations</th>
+                    <th>Best Time to Visit</th>
+                </tr>
+                <tr>
+                    <td>Season</td>
+                    <td>Weather</td>
+                    <td rowspan="3">November to April is generally the dry season, and it’s the best time for most activities.</td>
+                </tr>
+                <tr>
+                    <td>Wet Season</td>
+                    <td>May to October - Frequent rains, but lush landscapes</td>
+                </tr>
+                <tr>
+                    <td>Dry Season</td>
+                    <td>November to April - Warm, less rain</td>
+                </tr>
+            </table>
+
+            <!-- Currency Converter Box -->
+            <div class="converter-box">
+                <h3>Currency Converter</h3>
+                <p>USD to BZD</p>
+                <input type="number" id="usd" placeholder="Amount in USD" />
+                <button onclick="convertCurrency()">Convert</button>
+                <p id="bzd">BZD 0.00</p>
+            </div>
+        </div>
+    </div>
+    <div class="sitemap">
+        <h2>Site Map</h2>
+        <div class="sitemap-grid">
+            <a href="index.htm">Home</a>
+            <a href="adventure.htm">Adventures</a>
+            <a href="relaxation.htm">Relaxation Spots</a>
+            <a href="popular-landmarks.htm">Popular Landmarks</a>
+            <a href="travel-tips.htm">Travel Tips</a>
+            <a href="contact-us.htm">Contact Us</a>
+            <a href="about-me.htm">About Me</a>
+            <a href="credits.htm">Credits</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="back-to-top" onclick="scrollToTop()">↑ Top</div>
+</body>
+</html>

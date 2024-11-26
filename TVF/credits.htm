@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credits - Belize Travel Guide</title>
+    <meta name="description" content="Credits and acknowledgments for the Belize Travel Guide website, including resources, images, and contributors." />
+    <meta name="keywords" content="Credits, acknowledgments, Belize Travel Guide, image sources, website contributors" />
+    <meta name="author" content="Amber" />
+    
+    <!-- Link to external CSS file for general styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Include jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Specific CSS for the Credits Page */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Original Background */
+            color: #333; /* Original Text Color */
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff; /* Matches Original Styling */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0; /* Initially hidden for fade-in effect */
+        }
+
+        h2 {
+            color: #2e8b57; /* Matches Original Green Heading */
+            font-size: 1.8em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        p, ul {
+            color: #333; /* Matches Original Text Color */
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: square; /* Original List Styling */
+            padding-left: 20px;
+        }
+
+        .topnav {
+            background-color: #2e8b57; /* Matches Original Navbar */
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2e8b57; /* Matches Original Green */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #backToTop:hover {
+            background-color: #1d6a3f; /* Slightly Darker Green */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner Section -->
+    <div id="banner" style="background-color: #2e8b57; color: white; padding: 20px 0; text-align: center;">
+        <h1 id="heading">Credits</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.htm">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Things to Do</button>
+            <div class="dropdowncontent">
+                <a href="adventure.htm">Adventures</a>
+                <a href="relaxation.htm">Relaxation Spots</a>
+            </div>
+        </div>
+        <a href="popular-landmarks.htm">Popular Landmarks</a>
+        <a href="travel-tips.htm">Travel Tips</a>
+        <a href="contact-us.htm">Contact Us</a>
+        <a href="about-me.htm">About Me</a>
+        <a href="credits.htm" class="active">Credits</a>
+    </div>
+
+    <!-- Credits Content -->
+    <div class="content">
+        <h2>Acknowledgments & Credits</h2>
+        <p>This website would not have been possible without the help and resources from various contributors. Special thanks to the following for their contributions and resources:</p>
+        
+        <h3>Images</h3>
+        <ul>
+            <li>Some images were found via Google Images, with credit given to the original sources where available.</li>
+            <li>All other images courtesy of personal collection or credited as listed in each section.</li>
+        </ul>
+
+        <h3>Content and Information</h3>
+        <ul>
+            <li>Historical information about Belize’s landmarks provided by National Institute of Culture and History, Belize (https://nichbelize.org/)</li>
+            <li>Weather data obtained from Belize Meteorological Service (https://nms.gov.bz/)</li>
+            <li>Some other details came from (https://travel.usnews.com/Belize/)</li>
+        </ul>
+
+        <h3>Special Thanks</h3>
+        <p>A huge thank you to family, friends, and mentors who supported the creation of this site, including:</p>
+        <ul>
+            <li>Professor G. Shankar, for guidance in content creation</li>
+            <li>Friends and family who shared their insights and stories about Belize</li>
+        </ul>
+
+        <h3>Design and Development</h3>
+        <p>This website was designed and developed by Amber Ford as part of a project. The goal is to promote Belize and its beautiful destinations. Created with passion for both technology and culture, and aimed at sharing the beauty of Belize with the world.</p>
+        <h3>Honor Code</h3>
+        <p>I Amber Ford pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and have observed all the restrictions and limitations specified therein.</p>
+    </div>
+
+    <div id="backToTop" onclick="scrollToTop()">↑ Top</div>
+
+    <footer>
+        <p>&copy; 2024 Belize Travel Guide</p>
+    </footer>
+
+    <!-- jQuery Script for Animations -->
+    <script>
+        $(document).ready(function () {
+            // Fade in content section on page load
+            $(".content").fadeTo(1000, 1);
+
+            // Show "Back to Top" button when scrolling down
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $("#backToTop").fadeIn();
+                } else {
+                    $("#backToTop").fadeOut();
+                }
+            });
+
+            // Smooth scroll to top when "Back to Top" is clicked
+            $("#backToTop").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
